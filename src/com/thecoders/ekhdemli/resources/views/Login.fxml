@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" spacing="25.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.thecoders.ekhdemli.java.controllers.LoginControllers">
+   <padding>
+      <Insets bottom="40.0" left="30.0" right="30.0" top="40.0" />
+   </padding>
+   <children>
+      <VBox alignment="TOP_CENTER" spacing="5.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login/bootstrapLogo.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="title" text="Login" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin>
+      </VBox>
+      <JFXTextField fx:id="fieldEmail" labelFloat="true" promptText="Email" styleClass="field" />
+      <VBox alignment="CENTER_RIGHT" spacing="5.0">
+         <children>
+            <JFXPasswordField fx:id="fieldPassword" labelFloat="true" promptText="Password" styleClass="field" />
+            <Hyperlink onAction="#onForgetPassword" text="Forget Password?" />
+         </children>
+      </VBox>
+      <JFXCheckBox fx:id="checkRememberMe" styleClass="remember-me" text="Remember Me" />
+      <JFXButton onAction="#onSignIn" styleClass="btn" text="Sign In" />
+   </children>
+</VBox>
